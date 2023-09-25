@@ -3,12 +3,15 @@ const order = prompt(
     "vanilla,vanilla,vanilla,strawberry,coffee,coffee"
 )
 
-const usrFlavorArray = order.split(",");
+const userFlavorArray = order.split(",");
 
 function count(flavors){
     const froyo = {}
-    for (const flavor of usrFlavorArray){
+    for (const flavor of userFlavorArray){
         froyo[flavor] = froyo[flavor] +1 || 1;
     }
     return froyo;
 }
+
+const output = count(userFlavorArray);
+console.table(output);
